@@ -74,6 +74,9 @@
     <!-- Slider main container -->
 <div class="swiper">
     <!-- Additional required wrapper -->
+     <!-- If we need pagination -->
+     <div class="swiper-pagination"></div>
+
     <div class="swiper-wrapper">
       <!-- Slides -->
       <div class="swiper-slide"><img src="img/ApacheKafka.png" alt="Livro sobre apache kafca e spring boot o Alura Books"></div>
@@ -84,8 +87,7 @@
       <div class="swiper-slide"> <img src="img/Acessibilidade.png" alt="Livro sobre Acessibilidade  "> </div>
 
     </div>
-    <!-- If we need pagination -->
-    <div class="swiper-pagination"></div>
+  
   
     <!-- If we need navigation buttons -->
     <div class="swiper-button-prev"></div>
@@ -98,9 +100,14 @@
    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
    <script>
          const swiper = new Swiper('.swiper', {
-        speed: 10,
-       
-        });
+          spaceBetween: 10,
+          slidesPerView: 3,
+         position: initial { 
+          el: '.swiper-pagination',   
+          type: 'bullets' },
+        
+         });
+         
    </script>
 
 </body>
